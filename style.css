@@ -1,0 +1,532 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  background-color: white;
+  width: 100%;
+  z-index: 999;
+  border-bottom: 2px solid #f5f5f5;
+}
+nav {
+  width: 81%;
+  margin: 7px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.search-container {
+  display: flex;
+  width: 620px;
+  border-radius: 5px;
+  overflow: hidden;
+  border-radius: 50px;
+  padding: 6px;
+  background-color: #f5f5f5;
+  margin-right: 6px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 8px 12px;
+  border: none;
+  outline: none;
+  font-size: 17px;
+  /* font-weight: bold; */
+  background-color: #f5f5f5;
+  font-family: 'Poppins', sans-serif;
+}
+
+.search-button {
+  background: transparent;
+  border-left: 1px solid #ccc;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.search-button i {
+  font-size: 19px;
+  color: #a3a3a3;
+}
+
+.login {
+  border-radius: 4px;
+  border: none;
+  color: rgb(255, 255, 255);
+  background-color: rgb(254, 44, 85);
+  min-height: 36px;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding: 6px 8px;
+  user-select: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  margin-left: 16px;
+  min-width: 100px;
+}
+
+.three-dots {
+  font-size: 19px;
+  border: none;
+  background: transparent;
+}
+
+.container {
+  width: 83%;
+  margin: 85px auto 15px auto;
+  border-radius: 8px;
+  padding: 35px 32px;
+  box-shadow: rgba(0, 0, 0, 6%) 0 2px 12px 0;
+}
+.container h1 {
+    color: #161823;
+    font-family: 'Poppins', sans-serif;
+    /* font-weight: 700; */
+    font-size: 22px;
+    line-height: 28px;
+    margin-top: -5px;
+}
+.login-user {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 270px;
+    padding: 16px;
+    margin: 20px 0;
+    border-radius: 5px;
+    background-color: rgba(22, 24, 35, 3%);
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: lighter;
+}
+.recharge {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.recharge h3 {
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 1.2;
+    font-family: 'Poppins', sans-serif;
+}
+.recharge-span {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    display: inline-block;
+    color: #fe2c55;
+}
+.i-icon {
+    margin-left: 5px;
+}
+
+.prices-div {
+  /* display: grid;
+  grid-template-columns: repeat(4, 1fr); */
+
+  padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+    width: 100%;
+    position: relative;
+    display: grid
+;
+    grid-template-columns: repeat(auto-fit, 219px);
+    gap: 0px;
+    justify-content: space-between;
+  /* gap: 20px; */
+}
+.card-svg {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+.price {
+ width: 100%;
+    min-height: 100px;
+    position: relative;
+    display: flex
+;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 0px;
+    border: 1px solid rgba(0, 0, 0, 0.17);
+    opacity: 1;
+    margin: 15px 0;
+}
+.card-svg h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    line-height: 1.2;
+    color: rgba(32, 32, 32, 1);
+    font-weight: 700;
+}
+.total-fee {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.48);
+    text-align: center;
+    line-height: 1.1;
+    height: 20px;
+}
+
+p {
+    font-size: 16px;
+    margin: -3px;
+    font-family: 'Poppins', sans-serif;
+}
+.recharge-btn {
+    min-width: 108px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: rgba(254, 44, 85, 1);
+    color: rgba(255, 255, 255, 1);
+    line-height: 21px;
+    width: 200px;
+    height: 46px;
+    opacity: .4;
+    border: none;
+    margin: 10px 0;
+    font-family: 'Poppins', sans-serif;
+}
+.secure-payment {
+    text-align: right;
+}
+.question {
+    display: flex
+;
+    -moz-box-align: center;
+    align-items: center;
+    -moz-box-pack: center;
+    justify-content: center;
+    border: none;
+    background: none #fff;
+    outline: none;
+    min-width: 48px;
+    width: 48px;
+    height: 48px;
+    box-shadow: rgba(0, 0, 0, .12) 0 2px 12px 0;
+    border-radius: 48px;
+    cursor: pointer;
+    line-height: 24px;
+    white-space: nowrap;
+}
+.q-container {
+    display: flex;
+    justify-content: right;
+    margin: -15px 70px 10px 0;
+}
+
+/* For each div when it is selected. */
+.price.selected {
+  border: 1px solid rgba(254, 44, 85, 1);
+    opacity: 1;
+    background-color: rgba(254, 44, 85, 0.07);
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  --moz-appearance: textfield;
+}
+
+/* Modal Styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
+  animation: showModal 0.5s ease-out;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  margin: 15% auto;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+  z-index: 10; /* Ensures the content stays above the background */
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+  font-family: 'Poppins', sans-serif;
+}
+
+.modal-content h2 {
+  color: #32cd32; /* Cheerful green color */
+  font-size: 2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.modal-content button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  background-color: rgba(254, 44, 85, 1);
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 15px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.modal-content button:hover {
+  background-color: rgba(254, 44, 85, 0.9);
+}
+
+@media screen and (max-width: 1200px) {
+    nav {
+  width: 88%;
+  margin: 7px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+    .search-container {
+  display: flex;
+  width: 520px;
+  border-radius: 5px;
+  overflow: hidden;
+  border-radius: 50px;
+  padding: 2px;
+  background-color: #f5f5f5;
+  margin-right: 6px;
+}
+.search-input {
+  flex: 1;
+  padding: 8px 12px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  /* font-weight: bold; */
+  background-color: #f5f5f5;
+  font-family: 'Poppins', sans-serif;
+}
+.search-button i {
+  font-size: 17px;
+  color: #a3a3a3;
+}
+.login {
+    padding: 6px 5px;
+    min-height: auto;
+}
+.container {
+    width: 86%;
+  margin: 85px auto 15px auto;
+  border-radius: 8px;
+  padding: 35px 32px;
+  box-shadow: rgba(0, 0, 0, 6%) 0 2px 12px 0;
+}
+}
+
+@media screen and (max-width: 992px) {
+   .search-container {
+  display: flex;
+  width: 440px;
+  border-radius: 5px;
+  overflow: hidden;
+  border-radius: 50px;
+  padding: 2px;
+  background-color: #f5f5f5;
+  margin-right: 6px;
+} 
+.recharge-btn {
+    width: 190px;
+     padding-left: 14px;
+    padding-right: 14px;
+}
+}
+
+@media screen and (max-width: 932px) {
+   .search-container {
+  display: flex;
+  width: 340px;
+  border-radius: 5px;
+  overflow: hidden;
+  border-radius: 50px;
+  padding: 2px;
+  background-color: #f5f5f5;
+  margin-right: 6px;
+} 
+nav {
+    width: 92%;
+}
+.prices-div {
+    justify-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+}
+
+@media screen and (max-width: 740px) {
+    .search-container {
+        display: none;
+    }
+    header {
+    padding: 0 10px;
+}
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .modal-content {
+  background-color: white;
+  padding: 20px;
+  margin: 45% auto;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+  z-index: 10; /* Ensures the content stays above the background */
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+  font-family: 'Poppins', sans-serif;
+}
+.modal-content h2 {
+  color: #32cd32; /* Cheerful green color */
+  font-size: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+   .search-container {
+  display: flex;
+  width: 240px;
+  border-radius: 5px;
+  overflow: hidden;
+  border-radius: 50px;
+  padding: 0px;
+  background-color: #f5f5f5;
+  margin-right: 0px;
+  display: none;
+
+} 
+.search-input {
+  flex: 1;
+  padding: 3px 8px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  /* font-weight: bold; */
+  background-color: #f5f5f5;
+  font-family: 'Poppins', sans-serif;
+}
+.search-button {
+  background: transparent;
+  border-left: 0px solid #ccc;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.search-button i {
+  font-size: 9px;
+  color: #a3a3a3;
+}
+/* .login {
+    padding: 3px 2px;
+    margin-left: 9px;
+    min-height: auto;
+    font-size: 10px;
+    min-width: 50px;
+} */
+.links {
+    gap: 16px;
+}
+nav {
+    width: 100%;
+}
+.prices-div {
+    justify-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.container {
+    width: 95%;
+    padding: 16px 10px;
+}
+.recharge-span {
+    font-size: 12px;
+}
+}
+
+@media screen and (max-width: 420px) {
+    .search-container {
+  display: flex;
+  width: 190px;
+  border-radius: 5px;
+  overflow: hidden;
+  border-radius: 50px;
+  padding: 0px;
+  background-color: #f5f5f5;
+  margin-right: 0px;
+  display: none;
+
+} 
+header {
+    padding: 0 10px;
+}
+.prices-div {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    justify-content: center;
+    align-items: center;
+}
+.price {
+    width: 280px;
+}
+.login {
+    padding: 4px 5px;
+    margin-left: 9px;
+    min-height: auto;
+    font-size: 10px;
+    min-width: 50px;
+}
+}

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <svg width="118" height="42">
+            <use href="#tiktok-logo"></use>
+          </svg>
+        </div>
+        <div class="links">
+          <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search" />
+            <div class="search-button">
+              <i class="fa fa-search"></i>
+            </div>
+          </div>
+          <button class="login">Login</button>
+          <button class="three-dots">
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <h1>Get Coins</h1>
+        <div class="login-user">
+          <svg width="1em" height="1em" viewBox="0 0 48 48" font-size="44">
+            <use href="#login-user"></use>
+          </svg>
+          <h2>Log in</h2>
+        </div>
+        <div class="recharge">
+          <h3>Recharge:</h3>
+          <span class="recharge-span"
+            >Save around 25% with a lower third-party service fee.</span
+          >
+          <div class="i-icon">
+            <svg
+              width="1em"
+              height="1em"
+              style="vertical-align: middle"
+              font-size="14px"
+              viewBox="0 0 48 48"
+            >
+              <use href="#i-icon-svg"></use>
+            </svg>
+          </div>
+        </div>
+
+        <div class="prices-div">
+          <div class="price">
+            <div class="card-svg">
+              <svg
+                width="1em"
+                height="1em"
+                font-size="32px"
+                viewBox="0 0 48 48"
+              >
+                <use href="#card-svg"></use>
+              </svg>
+              <h2>30</h2>
+            </div>
+            <div class="total-fee">NGN560</div>
+          </div>
+          <div class="price">
+            <div class="card-svg">
+              <svg
+                width="1em"
+                height="1em"
+                font-size="32px"
+                viewBox="0 0 48 48"
+              >
+                <use href="#card-svg"></use>
+              </svg>
+              <h2>350</h2>
+            </div>
+            <div class="total-fee">NGN6,400</div>
+          </div>
+          <div class="price">
+            <div class="card-svg">
+              <svg
+                width="1em"
+                height="1em"
+                font-size="32px"
+                viewBox="0 0 48 48"
+              >
+                <use href="#card-svg"></use>
+              </svg>
+              <h2>700</h2>
+            </div>
+            <div class="total-fee">NGN12,800</div>
+          </div>
+          <div class="price">
+            <div class="card-svg">
+              <svg
+                width="1em"
+                height="1em"
+                font-size="32px"
+                viewBox="0 0 48 48"
+              >
+                <use href="#card-svg"></use>
+              </svg>
+              <h2>1,400</h2>
+            </div>
+            <div class="total-fee">NGN25,600</div>
+          </div>
+          <div class="price">
+            <div class="card-svg">
+              <svg
+                width="1em"
+                height="1em"
+                font-size="32px"
+                viewBox="0 0 48 48"
+              >
+                <use href="#card-svg"></use>
+              </svg>
+              <h2>3,500</h2>
+            </div>
+            <div class="total-fee">NGN64,000</div>
+          </div>
+          <div class="price">
+            <div class="card-svg">
+              <svg
+                width="1em"
+                height="1em"
+                font-size="32px"
+                viewBox="0 0 48 48"
+              >
+                <use href="#card-svg"></use>
+              </svg>
+              <h2>7,000</h2>
+            </div>
+            <div class="total-fee">NGN127,900</div>
+          </div>
+          <div class="price">
+            <div class="card-svg">
+              <svg
+                width="1em"
+                height="1em"
+                font-size="32px"
+                viewBox="0 0 48 48"
+              >
+                <use href="#card-svg"></use>
+              </svg>
+              <h2>17,500</h2>
+            </div>
+            <div class="total-fee">NGN319,600</div>
+          </div>
+          <div class="price" id="custom" onclick="custom()">
+            <div class="card-svg">
+              <svg
+                width="1em"
+                height="1em"
+                font-size="32px"
+                viewBox="0 0 48 48"
+              >
+                <use href="#card-svg"></use>
+              </svg>
+              <h2>Custom</h2>
+            </div>
+            <div class="total-fee">Large amount supported</div>
+          </div>
+        </div>
+        <p>
+          Total &nbsp; <span id="total"><strong>$0</strong></span>
+        </p>
+        <button class="recharge-btn" disabled>Recharge</button>
+        <div class="secure-payment">
+          <svg width="65" height="27">
+            <use href="#secure-payment"></use>
+          </svg>
+        </div>
+      </div>
+      <div class="q-container">
+        <div class="question">
+          <svg width="1em" height="1em" font-size="22" viewBox="0 0 48 48">
+            <use href="#question"></use>
+          </svg>
+        </div>
+      </div>
+    </main>
+
+    <!-- Recharge Modal -->
+    <!-- Cheerful Modal -->
+    <div id="successModal" class="modal">
+      <div class="modal-content">
+        <h2>🎉 Success!</h2>
+        <p id="paymentMessage">You have successfully paid NGN0 to Uche Godswill😎</p>
+        <button id="closeModal" class="close-btn">Close</button>
+      </div>
+    </div>
+
+    <!-- Question svg -->
+    <svg style="display: none">
+      <symbol id="question">
+        <svg>
+          <path
+            d="M21.36 28.05V22.8l1.79-.1c2.33-.1 3.87-1.36 3.87-3.31s-1.31-3-3.33-3c-1.95 0-3.53.95-3.88 3.1l-4.31-.7c.54-3.98 3.78-6.28 8.54-6.28 4.5 0 7.66 2.66 7.66 6.75 0 3.3-2.18 5.66-5.58 6.3v2.5h-4.76ZM20.62 32.72a2.99 2.99 0 0 1 3.07-3.04 2.96 2.96 0 0 1 3.04 3.04c0 1.7-1.28 3.01-3.04 3.01a2.98 2.98 0 0 1-3.07-3Z"
+          ></path>
+          <path
+            d="M2 24a22 22 0 1 1 44 0 22 22 0 0 1-44 0Zm22 18a18 18 0 1 0 0-36 18 18 0 0 0 0 36Z"
+          ></path>
+        </svg>
+      </symbol>
+    </svg>
+    <!-- Tiktok logo SVG -->
+    <svg style="display: none">
+      <symbol id="tiktok-logo">
+        <svg>
+          <path
+            fill="#25F4EE"
+            d="M9.875 16.842v-1.119A8.836 8.836 0 008.7 15.64c-4.797-.006-8.7 3.9-8.7 8.707a8.706 8.706 0 003.718 7.135A8.675 8.675 0 011.38 25.55c0-4.737 3.794-8.598 8.495-8.707z"
+          ></path>
+          <path
+            fill="#25F4EE"
+            d="M10.086 29.526c2.14 0 3.89-1.707 3.967-3.83l.006-18.968h3.463a6.78 6.78 0 01-.11-1.202h-4.726l-.006 18.969a3.978 3.978 0 01-3.967 3.829 3.93 3.93 0 01-1.846-.46 3.949 3.949 0 003.22 1.662zM23.992 13.166v-1.055a6.506 6.506 0 01-3.583-1.068 6.571 6.571 0 003.583 2.123z"
+          ></path>
+          <path
+            fill="#FE2C55"
+            d="M20.409 11.043a6.54 6.54 0 01-1.616-4.315h-1.265a6.557 6.557 0 002.88 4.316zM8.706 20.365a3.98 3.98 0 00-3.973 3.976c0 1.528.869 2.858 2.134 3.523a3.936 3.936 0 01-.754-2.321 3.98 3.98 0 013.973-3.976c.409 0 .805.07 1.175.185v-4.833a8.837 8.837 0 00-1.175-.083c-.07 0-.134.006-.204.006v3.708a3.999 3.999 0 00-1.176-.185z"
+          ></path>
+          <path
+            fill="#FE2C55"
+            d="M23.992 13.166v3.676c-2.453 0-4.727-.786-6.58-2.116v9.621c0 4.802-3.902 8.714-8.706 8.714a8.669 8.669 0 01-4.988-1.579 8.69 8.69 0 006.368 2.781c4.797 0 8.707-3.906 8.707-8.714v-9.621a11.25 11.25 0 006.579 2.116v-4.73c-.48 0-.94-.052-1.38-.148z"
+          ></path>
+          <path
+            fill="black"
+            d="M17.413 24.348v-9.622a11.251 11.251 0 006.58 2.116v-3.676a6.571 6.571 0 01-3.584-2.123 6.61 6.61 0 01-2.888-4.315H14.06l-.006 18.968a3.978 3.978 0 01-3.967 3.83A3.99 3.99 0 016.86 27.87a3.991 3.991 0 01-2.133-3.523A3.98 3.98 0 018.7 20.372c.409 0 .805.07 1.175.185v-3.708c-4.701.103-8.495 3.964-8.495 8.701 0 2.29.888 4.373 2.338 5.933a8.669 8.669 0 004.988 1.58c4.798 0 8.707-3.913 8.707-8.714zM30.048 13.179h14.774l-1.354 4.232h-3.832v15.644h-4.778V17.41l-4.804.006-.006-4.238zM69.032 13.179h15.12l-1.355 4.232h-4.17v15.644h-4.785V17.41l-4.804.006-.006-4.238zM45.73 19.502h4.733v13.553h-4.708l-.026-13.553zM52.347 13.128h4.733v9.257l4.689-4.61h5.646l-5.934 5.76 6.644 9.52h-5.213l-4.433-6.598-1.405 1.362v5.236H52.34V13.128h.006zM102.49 13.128h4.734v9.257l4.688-4.61h5.647l-5.934 5.76 6.643 9.52h-5.206l-4.433-6.598-1.405 1.362v5.236h-4.734V13.128zM48.093 17.954a2.384 2.384 0 002.382-2.384 2.384 2.384 0 10-2.382 2.384z"
+          ></path>
+          <path
+            fill="#25F4EE"
+            d="M83.544 24.942a8.112 8.112 0 017.474-8.087 8.748 8.748 0 00-.709-.026c-4.478 0-8.106 3.631-8.106 8.113 0 4.482 3.628 8.113 8.106 8.113.21 0 .498-.013.71-.026-4.178-.326-7.475-3.823-7.475-8.087z"
+          ></path>
+          <path
+            fill="#FE2C55"
+            d="M92.858 16.83c-.217 0-.505.012-.716.025a8.111 8.111 0 017.468 8.087 8.112 8.112 0 01-7.468 8.087c.211.02.499.026.716.026 4.478 0 8.106-3.631 8.106-8.113 0-4.482-3.628-8.113-8.106-8.113z"
+          ></path>
+          <path
+            fill="black"
+            d="M91.58 28.887a3.94 3.94 0 01-3.94-3.945 3.94 3.94 0 117.882 0c0 2.18-1.77 3.945-3.942 3.945zm0-12.058c-4.477 0-8.106 3.631-8.106 8.113 0 4.482 3.629 8.113 8.106 8.113 4.478 0 8.106-3.631 8.106-8.113 0-4.482-3.628-8.113-8.106-8.113z"
+          ></path>
+        </svg>
+      </symbol>
+    </svg>
+
+    <!-- Login user svg -->
+    <svg style="display: none">
+      <symbol id="login-user">
+        <svg
+          color="inherit"
+          font-size="44"
+          viewBox="0 0 48 48"
+          fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg"
+          width="1em"
+          height="1em"
+        >
+          <g clip-path="url(#Icon_Color-Default_Avatar_svg__a)">
+            <circle cx="24" cy="24" r="24" fill="#D0D1D3"></circle>
+            <circle
+              cx="24"
+              cy="22"
+              r="9"
+              fill="#fff"
+              fill-opacity="0.75"
+            ></circle>
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M8.28 42.16a18 18 0 0 1 31.37 0A23.9 23.9 0 0 1 23.97 48c-6 0-11.48-2.2-15.69-5.84Z"
+              fill="#fff"
+              fill-opacity="0.75"
+            ></path>
+          </g>
+          <defs>
+            <clipPath id="Icon_Color-Default_Avatar_svg__a">
+              <path fill="#fff" d="M0 0h48v48H0z"></path>
+            </clipPath>
+          </defs>
+        </svg>
+      </symbol>
+    </svg>
+
+    <!-- I icon svg -->
+    <svg style="display: none">
+      <symbol id="i-icon-svg">
+        <svg>
+          <path
+            d="M24 6a18 18 0 1 0 0 36 18 18 0 0 0 0-36ZM2 24a22 22 0 1 1 44 0 22 22 0 0 1-44 0Zm25-8a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm-4 6a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V23a1 1 0 0 0-1-1h-2Z"
+          ></path>
+        </svg>
+      </symbol>
+    </svg>
+
+    <!-- Cards SVG -->
+    <svg style="display: none">
+      <symbol id="card-svg">
+        <svg>
+          <g clip-path="url(#Icon_Color-Tiktok_Coin_svg__a)">
+            <path
+              d="M48 24a24 24 0 1 1-48 0 24 24 0 0 1 48 0Z"
+              fill="#FFB84D"
+            ></path>
+            <path
+              d="M47 24a23 23 0 1 1-46 0 23 23 0 0 1 46 0Z"
+              fill="#FFDE55"
+            ></path>
+            <path
+              d="M42 24a18 18 0 1 1-36 0 18 18 0 0 1 36 0Z"
+              fill="#F7A300"
+            ></path>
+            <path
+              d="M42 24a18 18 0 1 1-36 0 18 18 0 0 1 36 0Z"
+              fill="#F7A80F"
+            ></path>
+            <path
+              d="M41.94 25.5a18 18 0 1 0-35.88 0 18 18 0 0 1 35.88 0Z"
+              fill="#E88B00"
+            ></path>
+            <path
+              d="M41.94 25.5a18 18 0 1 0-35.88 0 18 18 0 0 1 35.88 0Z"
+              fill="#F09207"
+            ></path>
+            <path
+              d="M34.74 17.77v5.86c-2.06 0-4.05-.44-5.81-1.55v7.2a7.79 7.79 0 0 1-7.84 7.75 7.79 7.79 0 0 1-7.8-8.35 7.79 7.79 0 0 1 9.19-8.24v6c-.47-.13-.9-.26-1.39-.26a3.14 3.14 0 0 0-3.09 2.5 3.14 3.14 0 0 0 3.1 2.5c1.74 0 3.14-1.4 3.14-3.11V12.03h4.69a5.6 5.6 0 0 0 5.81 5.74Z"
+              fill="#F09207"
+            ></path>
+            <path
+              d="M34.34 18.18a5.78 5.78 0 0 1-5.82-5.74h-3.87v15.63c0 1.94-1.6 3.5-3.56 3.5a3.53 3.53 0 0 1-3.55-3.5 3.53 3.53 0 0 1 4.52-3.38v-3.9a7.38 7.38 0 0 0-8.4 7.28 7.38 7.38 0 0 0 7.43 7.34c4.1 0 7.43-3.29 7.43-7.34v-7.98a9.73 9.73 0 0 0 5.82 1.92v-3.83Z"
+              fill="#fff"
+            ></path>
+          </g>
+        </svg>
+      </symbol>
+    </svg>
+
+    <!-- Secure payment svg -->
+    <svg style="display: none">
+      <symbol id="secure-payment">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none">
+          <rect
+            width="63"
+            height="26"
+            x="1.287"
+            y="0.5"
+            fill="#60A901"
+            fill-opacity="0.1"
+            rx="13"
+          ></rect>
+          <path
+            fill="#8BC73F"
+            fill-rule="evenodd"
+            d="M13.736 8.421a.484.484 0 0 1 .674 0c.177.173.472.349.854.515a9.5 9.5 0 0 0 1.202.414 16 16 0 0 0 1.467.332l.022.004h.005c.23.038.399.232.399.46v.168l-.002.473c-.002.408-.006.99-.015 1.687 0 2.007-.9 3.456-1.856 4.395a6.6 6.6 0 0 1-1.383 1.043 4 4 0 0 1-.558.264 1.4 1.4 0 0 1-.472.11 1.4 1.4 0 0 1-.472-.11 4 4 0 0 1-.558-.264 6.6 6.6 0 0 1-1.383-1.043c-.957-.939-1.855-2.387-1.856-4.394a175 175 0 0 1-.016-2.129v-.2c0-.228.168-.422.397-.46h.006l.022-.004a10 10 0 0 0 .414-.079c.275-.056.65-.141 1.053-.253a9.5 9.5 0 0 0 1.203-.414c.382-.166.676-.342.853-.515m2.287 3.49a.24.24 0 0 1-.01.336l-2.089 1.98a.476.476 0 0 1-.646.007l-1.013-.912a.24.24 0 0 1-.018-.336l.319-.354a.24.24 0 0 1 .336-.018l.687.618 1.77-1.676a.24.24 0 0 1 .336.009z"
+            clip-rule="evenodd"
+          ></path>
+          <path
+            fill="#161823"
+            d="M24.505 12.096q-1.425 0-2.272-.848l.624-.888q.697.728 1.696.728.448 0 .688-.168.24-.176.24-.424 0-.216-.232-.352a1.6 1.6 0 0 0-.568-.208 9 9 0 0 1-.736-.176 6 6 0 0 1-.744-.272 1.4 1.4 0 0 1-.568-.48 1.4 1.4 0 0 1-.224-.8q0-.689.552-1.152.552-.472 1.472-.472 1.272 0 2.08.744l-.632.848q-.632-.584-1.552-.584-.352 0-.552.144a.45.45 0 0 0-.2.384q0 .192.224.32.232.128.568.2.345.064.736.184.4.12.736.28.345.152.568.488.232.329.232.792 0 .768-.552 1.24-.544.472-1.584.472M31.174 12h-3.776V6.664h3.776v1h-2.64v1.12h2.584v1h-2.584V11h2.64zm3.48.096q-1.224 0-2.04-.768-.808-.776-.808-1.992 0-1.224.808-1.992.816-.768 2.04-.768 1.496 0 2.224 1.304l-.976.48a1.43 1.43 0 0 0-.52-.552 1.3 1.3 0 0 0-.728-.224q-.728 0-1.208.496-.472.496-.472 1.256t.472 1.256q.48.496 1.208.496.392 0 .728-.216.345-.225.52-.56l.976.472q-.744 1.312-2.224 1.312m7.1-.6q-.607.6-1.792.6t-1.8-.6q-.608-.608-.608-1.632v-3.2h1.152v3.168q0 .575.328.92.328.336.928.336t.92-.336q.328-.344.328-.92V6.664h1.16v3.2q0 1.024-.616 1.632m6.003.504h-1.312l-1.048-1.896h-.832V12H43.43V6.664h2.496q.825 0 1.312.48t.488 1.24q0 .656-.352 1.064a1.5 1.5 0 0 1-.824.52zm-1.992-2.896q.345 0 .568-.192a.68.68 0 0 0 .224-.536.64.64 0 0 0-.224-.512.82.82 0 0 0-.568-.2h-1.2v1.44zM52.345 12H48.57V6.664h3.776v1h-2.64v1.12h2.584v1h-2.584V11h2.64z"
+          ></path>
+          <path
+            fill="#161823"
+            fill-opacity="0.6"
+            d="M23.361 20h-.664v-5.336h2.144q.776 0 1.224.464t.448 1.144-.456 1.144q-.448.465-1.216.464h-1.48zm1.4-2.712q.472 0 .768-.28a.98.98 0 0 0 .296-.736.96.96 0 0 0-.296-.728q-.295-.288-.768-.288h-1.4v2.032zM30.228 20h-.6v-.44q-.472.536-1.28.536a1.4 1.4 0 0 1-.936-.344q-.408-.344-.408-.936 0-.615.4-.944t.944-.328q.815 0 1.28.52v-.696q0-.375-.272-.592t-.704-.216q-.696 0-1.184.536l-.28-.416q.615-.64 1.544-.64.665 0 1.08.32t.416.984zm-1.656-.336q.712 0 1.056-.48v-.736q-.353-.472-1.056-.472-.424 0-.696.24a.76.76 0 0 0-.264.6q0 .375.264.616.271.232.696.232m2.659 1.848.088-.544a.8.8 0 0 0 .328.064q.207 0 .344-.088t.232-.32l.256-.584-1.616-3.904h.656l1.28 3.168 1.288-3.168h.648l-1.936 4.648q-.32.768-1.136.784-.249 0-.432-.056M40.624 20h-.6v-2.624q0-.8-.712-.8-.287 0-.575.176a1.3 1.3 0 0 0-.449.416V20h-.6v-2.624q0-.8-.712-.8-.28 0-.568.176a1.5 1.5 0 0 0-.447.424V20h-.6v-3.864h.6v.56q.15-.232.504-.44.36-.216.752-.216.416 0 .68.2a.95.95 0 0 1 .352.52q.175-.288.535-.504t.76-.216q1.08 0 1.08 1.168zm2.95.096q-.873 0-1.425-.56-.552-.569-.552-1.472 0-.848.544-1.432a1.77 1.77 0 0 1 1.36-.592q.857 0 1.352.592.504.585.504 1.48v.152h-3.12q.04.568.408.952.376.384.976.384.72 0 1.2-.496l.288.392q-.615.6-1.536.6m1.191-2.28a1.37 1.37 0 0 0-.336-.88q-.327-.4-.936-.4-.576 0-.912.392a1.46 1.46 0 0 0-.352.888zM49.537 20h-.592v-2.528q0-.488-.224-.688-.224-.208-.648-.208-.336 0-.648.176a1.6 1.6 0 0 0-.496.424V20h-.6v-3.864h.6v.56q.225-.272.6-.464.376-.192.784-.192 1.224 0 1.224 1.248zm2.19.096q-.864 0-.864-.904v-2.528h-.64v-.528h.64V15.08h.608v1.056h.784v.528h-.784v2.4q0 .225.096.36.105.136.288.136.257 0 .408-.168l.176.456q-.264.248-.712.248"
+          ></path>
+          <rect
+            width="63"
+            height="26"
+            x="1.287"
+            y="0.5"
+            stroke="#60A901"
+            rx="13"
+          ></rect>
+        </svg>
+      </symbol>
+    </svg>
+
+    <script src="index.js"></script>
+  </body>
+</html>
