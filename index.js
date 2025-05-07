@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const totalDisplay = document.getElementById("total");
   const rechargeButton = document.querySelector(".recharge-btn");
   const customCard = document.getElementById("custom");
+  const recipientNameInput = document.getElementById("recipientName");
   const customH2 = customCard.querySelector("h2");
   const audio = new Audio("./sounds/cash.mp3");
   audio.volume = 0.3; // Range is 0.0 (silent) to 1.0 (full volume)
@@ -82,8 +83,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Recharge button click = show modal
   rechargeButton.addEventListener("click", function () {
+    const recipientName = recipientNameInput.value.trim() || "the recipient";
     audio.play();
-    paymentMessage.textContent = `You have successfully paid ${totalDisplay.textContent} to Uche Godswill😎`;
+    paymentMessage.textContent = `You have successfully paid ${totalDisplay.textContent} to  ${recipientName}`;
     successModal.style.display = "block";
   });
 
@@ -133,3 +135,14 @@ document.addEventListener("DOMContentLoaded", function () {
     return formatter.format(value);
   }
 });
+
+
+function toggleRecipientInput() {
+  const wrapper = document.getElementById("recipientWrapper");
+
+  if (wrapper.style.display === "none" || wrapper.style.display === "") {
+    wrapper.style.display = "block";
+  } else {
+    wrapper.style.display = "none";
+  }
+}
